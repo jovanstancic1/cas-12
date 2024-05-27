@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="conta">
+        <div id="countdown">
+            <ul>
+            <li><span id="days"></span></li>
+            <li><span id="hours"></span></li>
+            <li><span id="minutes"></span></li>
+            <li><span id="seconds"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        var endDate = new Date('may 27,2025 18:23:00').getTime();
+        var countdowntimer = setInterval(function()  {
+        var now = new Date().getTime();
+        var remaingtime = endDate - now;
+    
+          const second =1000;
+          const minute = second * 60; /* 60 000*/
+          const hour = minute * 60; /* 3 600 000*/
+          const day = hour * 24; /* 86 400 000*/
+
+          daysleft = Math.trunc(remaingtime / day)
+          hoursleft = Math.trunc(remaingtime % day/ hour)
+          minutesleft = Math.trunc(remaingtime % hour/ minute)
+          secondsleft = Math.trunc(remaingtime % minute/ second)
+
+          document.getElementById('days').innerHTML=daysleft + ' Days ';
+          document.getElementById('hours').innerHTML=hoursleft + ' hours ';
+          document.getElementById('minutes').innerHTML=minutesleft + ' minutes ';
+          document.getElementById('seconds').innerHTML=secondsleft + ' seconds ';
+
+          if (remaingtime <= 0) {
+            document.write('vreme je!');
+          }
+        }, 1000);
+    </script>
+</body>
+</html>
