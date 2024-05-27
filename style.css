@@ -1,0 +1,48 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+  align-items: center;
+  background-color: brown;
+  display: flex;
+  font-family: -apple-system,
+  blinkmacsystemfont
+  "Segoe Ui"
+  Roboto
+  Oxygen-Sans,
+  Cantarell,
+  "helvetica Neue",
+  sans-serif;
+}
+
+.conta {
+    color:beige;
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+ 
